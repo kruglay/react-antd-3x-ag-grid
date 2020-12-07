@@ -1,0 +1,303 @@
+@import "~antd/dist/antd.css";
+@import "mixins.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100% !important;
+}
+
+.main-wrapper {
+  height: 100%;
+  background: #fff;
+}
+
+.main-header {
+  height: 32px;
+  background: #fff;
+}
+
+.dev-title {
+  flex: 0;
+  width: 100%;
+  background: red;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  @include word-wrap;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: #f0f2f5;
+  }
+}
+
+.main-content {
+  height: 100%;
+  margin: 16px;
+  background: #fff;
+
+  .page-table {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+}
+
+.mobile-monitor-main-table {
+  .row {
+    border: 1px solid #d9d9d9;
+    height: 4em;
+    td {
+      padding: 2px;
+    }
+    .warning {
+      background-color: rgba(230, 127, 116, 0.17);
+    }
+  }
+  .header {
+    background-color: aliceblue;
+    th {
+      padding: 2px;
+      align-items: center;
+    }
+  }
+  .address-block {
+    max-width: 600px;
+  }
+}
+
+.no-padding {
+  padding: 0px;
+}
+
+.disabled,
+.disabled:hover {
+  cursor: not-allowed !important;
+  opacity: 0.4 !important;
+}
+
+.not-clickable {
+  pointer-events: none !important;
+}
+
+.map-popover {
+  .leaflet-div-icon {
+    background: transparent;
+    border: none;
+    margin-left: -16px !important;
+    margin-top: -32px !important;
+  }
+}
+
+.d-flex {
+  display: flex;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.wrap-r {
+  flex-wrap: wrap-reverse;
+}
+
+.column {
+  flex-direction: column;
+}
+.ai-c {
+  align-items: center;
+}
+
+.ai-fs {
+  align-items: flex-start;
+}
+
+.ai-fe {
+  align-items: flex-end;
+}
+
+.ai-b {
+  align-items: baseline;
+}
+
+.jc-sa {
+  justify-content: space-around;
+}
+
+.jc-sb {
+  justify-content: space-between;
+}
+
+.jc-se {
+  justify-content: space-evenly;
+}
+
+.jc-fs {
+  justify-content: flex-start;
+}
+
+.jc-fe {
+  justify-content: flex-end;
+}
+
+.fw-n {
+  font-weight: normal;
+}
+
+.fw-b {
+  font-weight: bold;
+}
+
+.show-data {
+  font-size: 1rem;
+}
+
+.show-data__label span {
+  font-weight: bold;
+}
+
+.ms {
+  margin: 0.5rem;
+}
+
+.fs-d {
+  font-size: 1rem;
+}
+
+.ta-r {
+  text-align: right;
+}
+
+.ta-l {
+  text-align: left;
+}
+
+.ta-c {
+  text-align: center;
+}
+
+.clickable {
+  color: #1e9aff;
+}
+
+.clickable:active,
+.clickable:hover {
+  cursor: pointer;
+}
+
+@for $i from 1 through 3 {
+  .m-#{$i} {
+    & {
+      margin: 1rem * $i;
+    }
+    &-l {
+      margin-left: 1rem * $i;
+    }
+    &-r {
+      margin-right: 1rem * $i;
+    }
+    &-t {
+      margin-top: 1rem * $i;
+    }
+    &-b {
+      margin-bottom: 1rem * $i;
+    }
+  }
+}
+@for $i from 1 through 3 {
+  .p-#{$i} {
+    & {
+      padding: 1rem * $i;
+    }
+    &-l {
+      padding-left: 1rem * $i;
+    }
+    &-r {
+      padding-right: 1rem * $i;
+    }
+    &-t {
+      padding-top: 1rem * $i;
+    }
+    &-b {
+      padding-bottom: 1rem * $i;
+    }
+  }
+}
+
+//antd
+.ant-spin-spinning.full-screen-spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+
+  .ant-spin-dot {
+    position: absolute;
+    top: 50%;
+  }
+}
+
+.ag-theme-balham .ag-ltr .ag-floating-filter-button {
+  margin-left: unset;
+}
+
+//после обновления на 24.1 уехал DatePicker
+.ag-floating-filter-body .ant-calendar-picker input {
+  height: 19px;
+  width: 100%;
+}
+
+.with-time {
+  .ant-calendar-picker-input {
+    font-size: 12px;
+  }
+}
+
+//reorder ag-grid
+.ag-theme-balham {
+  .ag-cell {
+    padding: 0;
+  }
+
+  .ag-menu {
+    overflow: visible;
+  }
+
+  .ag-header-cell-label {
+    font-weight: bold;
+  }
+  .ag-header-cell-filtered .ag-header-cell-label {
+    color: cornflowerblue;
+  }
+}
+
+.ReportHeader {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  height: 40px;
+  padding: 5px;
+}
+
+.badge {
+  padding: 0.5rem;
+  background: #e6e6e6;
+  border-radius: 0.5rem;
+
+  &.primary {
+    background: #00a0e9;
+  }
+}

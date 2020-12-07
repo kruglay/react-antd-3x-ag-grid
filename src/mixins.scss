@@ -1,0 +1,19 @@
+@mixin hyphenate {
+  hyphens: auto;
+  hyphenate-limit-chars: 6 3 2;
+  hyphenate-limit-lines: 2;
+  hyphenate-limit-last: always;
+  hyphenate-limit-zone: 8%;
+}
+
+@mixin word-wrap {
+  white-space: normal;
+  overflow-wrap: break-word;
+  @include hyphenate;
+}
+
+@mixin ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
