@@ -91,7 +91,7 @@ class Grid extends Component {
               height: "100%",
               width: "100%"
             }}
-            className="ag-theme-balham"
+            className="ag-theme-inv-light"
           >
             <AgGridReact
               gridOptions={gridOptions}

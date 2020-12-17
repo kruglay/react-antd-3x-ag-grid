@@ -1,6 +1,8 @@
 import React from "react";
-import { Drawer } from "antd";
+import { Drawer, Button, Switch, Select } from "antd";
 import { Route, Link } from "react-router-dom";
+import {Button as InvButton} from './uiKit/Button';
+import antdCustom from './antd.module.scss';
 
 import {
   useHistory,
@@ -9,6 +11,7 @@ import {
   useRouteMatch
 } from "react-router-dom";
 
+const {Option} = Select;
 const Line = (props) => {
   console.log("line", props);
   return (
@@ -29,6 +32,11 @@ const Line = (props) => {
   );
 };
 
+export const optchildren = [];
+for (let i = 10; i < 36; i++) {
+  optchildren.push(<Option key={i.toString(36) + i}>{i.toString(36) + i}</Option>);
+}
+
 const Complex = (props) => {
   console.log("complex", props);
   return (
@@ -37,6 +45,7 @@ const Complex = (props) => {
       placement="right"
       closable
       visible
+      width={400}
       onClose={() => props.history.push("/")}
     >
       <div>
@@ -44,6 +53,9 @@ const Complex = (props) => {
         <Link to={`${props.location.pathname}/line/1`}>line №1</Link>
         <br />
         <Link to={`${props.location.pathname}/complex/2`}>complex №2</Link>
+        <br/>
+        <br/>
+
       </div>
     </Drawer>
   );

@@ -1,0 +1,8 @@
+.invSelect {
+	:global {
+		.ant-select-selection {
+			max-height: 22px;
+			overflow: auto;
+		}
+	}
+}

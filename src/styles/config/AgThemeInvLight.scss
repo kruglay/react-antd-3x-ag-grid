@@ -1,0 +1,10 @@
+// ag-grid.scss defines structural styles and should be imported first
+@import "~ag-grid-community/src/styles/ag-grid.scss";
+@import "~ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin.scss";
+
+.ag-theme-inv-light {
+	@include ag-theme-alpine((
+  	header-background-color: #EBF4FE,
+		header-column-separator: false,
+	));
+}
