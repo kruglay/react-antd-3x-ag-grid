@@ -24,6 +24,7 @@ const App = (props) => {
             <li>
               <Link to="/users">Users</Link>
             </li>
+            <div>test</div>
           </ul>
         </nav>
 
